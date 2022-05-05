@@ -1,4 +1,2 @@
-from matplotlib.pyplot import pcolor
 
-
-print (pc)
+print ("Pedro Garcia Carneiro da Cunha")
