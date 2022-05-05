@@ -1,2 +1,1 @@
-
-print ("Pedro Garcia Carneiro da Cunha junior")
+print ("Pedro")
