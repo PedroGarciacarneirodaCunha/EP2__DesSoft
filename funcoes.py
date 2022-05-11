@@ -9,9 +9,9 @@ def normaliza(dic):
     return saida
 
 
-# completar
+""""# completar
 def haversine (raio, latitude_1, longitude_1, latitude_2, longitude_1):
 
     d = 
 
-    return d
+    return d""""
