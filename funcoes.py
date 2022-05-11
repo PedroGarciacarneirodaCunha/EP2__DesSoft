@@ -1,4 +1,4 @@
-  from random import choice
+from random import choice
 
 def normaliza(dic):
     saida = {}
@@ -14,4 +14,4 @@ def haversine (raio, latitude_1, longitude_1, latitude_2, longitude_1):
 
     d = 
 
-    return d""""
+    return d"""
