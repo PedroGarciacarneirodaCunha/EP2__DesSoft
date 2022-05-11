@@ -1,3 +1,4 @@
 # EP2__DesSoft
  Desenvolvedores Luis Filippe e Pedro Cunha
-oi
+
+Projeto realizado para a disciplina de Design de Software
