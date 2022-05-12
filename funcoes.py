@@ -72,3 +72,15 @@ def adiciona_em_ordem (pais, distancia, lista):
         saida.append(combonovo)
 
     return saida
+
+# Analisando se o país já foi citado
+
+def esta_na_lista (pais, paises):
+
+    for i in paises:
+
+        if pais == i[0]:
+
+            return True
+            
+    return False
