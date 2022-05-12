@@ -45,3 +45,27 @@ Você tem 20 tentativas.
     lt1 = paises[pais]['geo']['latitude']
     lg1 = paises[pais]['geo']['longitude']
     raio = 6371
+
+    while tentativas > 0:
+
+        palpite = input('Qual o seu palpite? ').lower()
+
+        na_lista = esta_na_lista(palpite, palpites)
+
+        if not na_lista:
+
+            if palpite == 'desisto':
+                print('Calma, o senhor está nervoso')
+                ctz = input('Tem certeza que deseja desistir da rodada? [s|n] ')
+                while ctz != 's' and ctz != 'n':
+                    ctz = input('Digite |s| ou |n|: ')
+                if ctz == 's':
+                    print(f'Você perdeu, o país era: {pais}')
+                    break
+            
+            elif palpite == pais:
+                print (f'Parabésn, você acertou em {20 - tentativas + 1} tentativa(s)!!!')
+                break
+
+            elif palpite not in paises.keys():
+                print('País desconecido')
