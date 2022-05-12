@@ -1,6 +1,7 @@
 from random import choice
 from math import *
 
+# Corrigir o dicionario
 def normaliza(dic):
     saida = {}
     for continente, paises in dic.items():
@@ -30,3 +31,44 @@ def sorteia_pais(paises):
     pais = choice(lista)
 
     return pais
+
+# Colocando as distâncias em ordem
+def adiciona_em_ordem (pais, distancia, lista):
+
+    saida = []
+
+    combonovo = [pais, distancia]
+
+    if len (lista) == 0:
+
+        saida.append (combonovo)
+
+        return saida
+    
+    for i in lista:
+
+        paises = i[0]
+
+        dist = i[1]
+
+        combo = [paises, dist]
+
+        if distancia > dist:
+
+            saida.append(combo)
+
+        elif distancia < dist and [pais, distancia] not in saida:
+
+            saida.append (combonovo)
+
+            saida.append (combo)
+
+        else:
+
+            saida.append(combo)
+
+    if [pais, distancia] not in saida:
+
+        saida.append(combonovo)
+
+    return saida
