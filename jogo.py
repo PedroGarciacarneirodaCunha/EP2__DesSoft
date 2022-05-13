@@ -69,3 +69,12 @@ Você tem 20 tentativas.
 
             elif palpite not in paises.keys():
                 print('País desconecido')
+
+            elif palpite != 'dica' and palpite != 'desisto':
+                lt2 = paises[palpite]['geo']['latitude']
+                lg2 = paises[palpite]['geo']['longitude']
+
+                distancia = haversine(raio, lt1, lg1, lt2, lg2) / 1000
+
+                # Adiciona o palpite na lista de países citados
+                palpites = adiciona_em_ordem(palpite, distancia, palpites)
