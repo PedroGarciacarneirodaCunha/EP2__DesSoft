@@ -128,7 +128,7 @@ def func_disp(dic):
 
     for val in dic.keys():
         
-        val = str(val)
+        val = int(val)
 
         disp.append(val)
 
