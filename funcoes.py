@@ -84,3 +84,58 @@ def esta_na_lista (pais, paises):
             return True
             
     return False
+
+# Sorteando a letra
+
+def sorteia_letra(palavra, restritos):
+
+    palavra = palavra.lower()
+
+    especiais = ['.', ',', '-', ';', ' ']
+
+    lista = []
+
+    for letra in palavra:
+
+        if letra not in especiais and letra not in restritos:
+
+            lista.append(letra)
+
+    if len(lista) == 0:
+
+        return ''
+
+    sorteado = choice(lista)
+
+    return sorteado
+
+# Fazendo a lista de dicas
+def ldicas(dic):
+
+    lista = []
+
+    for valor, dica in dic.items():
+
+        lista.append(f'{valor}. {dica[0]} - custa {dica[1]} tentativas')
+
+    return lista
+
+# Criando a lista de dicas disponíveis
+
+def func_disp(dic):
+
+    disp = []
+
+    for val in dic.keys():
+        
+        val = str(val)
+
+        disp.append(val)
+
+    dicas_disp = f'{disp}'
+
+    saida = dicas_disp.replace(',', '|')
+
+    return saida
+
+# 
