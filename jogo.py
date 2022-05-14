@@ -62,6 +62,126 @@ Você tem 20 tentativas.
 
         if not na_lista:
 
+            if palpite == 'dica':
+
+                if total_d == 4:
+
+                    print('>>>> Você não tem mais dicas')
+                
+                else :
+
+                    dica_l = ldicas(dicas)
+
+                    print ('Mercaod de dicas')
+                    print ('------------------------------------------')
+
+                    for opt in dica_l:
+
+                        print(opt)
+
+                    print('------------------------------------------')
+
+                    disp = func_disp(dicas)
+
+                    o = input(f' Escolha uma dica {disp}: ')
+
+                    while o not in dicas.keys():
+
+                        print ('Opção inválida')
+                        o = input(f'Escolha uma dica {disp}: ')
+                    
+                    if dicas[o][1] > tentativas:
+
+                        print ('Você não tem tentativas suficiente')
+
+                    else:
+                        if o == '1':
+
+                            car_sort = choice(cores)
+                            
+                            dicas_dadas.append(f'Cores da bandeira: {car_sort}')
+
+                            cores.remove (car_sort)
+
+                            if len (cores) == 0:
+
+                                del dicas [o]
+
+                            tentativas -= 4
+
+                            total_d += 1
+
+                        elif o == '2':
+
+                            capital = paises[pais]['capital']
+
+                            restritos = restringe(capital)
+
+                            sorteado = sorteia_letra(capital, restritos)
+
+                            restritos.append(sorteado)
+                            
+                            dicas_dadas.append(f 'Letra de capital: {sorteado}]')
+
+                            tentativas -= 3
+
+                            total_d += 1
+
+                        elif o == '3':
+
+                            area = paises[pais]['area'] / 1000
+
+                            dicas_dadas.append(f'Área: {area} km2')
+
+                            tentativas -= 6
+
+                            del dicas[o]
+
+                            total_d += 1
+
+                        elif o == '4':
+
+                            pop = paises[pais]['população']
+
+                            dicas_dadas.append (f'Área: {area} km2')
+
+                            tentativas -= 6
+
+                            del dicas [o]
+
+                            total_d += 1
+
+                        elif o == '5':
+
+                            cont = paises[pais]['continente']
+
+                            dicas_dadas.append(f'Continente: {cont}')
+
+                            tentativas -= 7
+
+                            del dicas [o]
+
+                            total_d += 1
+
+                        print('Distâncias: ')
+
+                        for chute in palpites:
+
+                            print(f'{colore_palavra(chute)}')
+
+                        print ('Dicas: ')
+
+                        for dica in dicas_dadas:
+
+                            print(dica)
+
+                        if tentativas > 0:
+
+                            print (f'Você ainda tem { colore_tentativas(tentativas)} tentativas(s)')
+
+                        
+
+
             if palpite == 'desisto':
                 print('Calma, o senhor está nervoso')
                 ctz = input('Tem certeza que deseja desistir da rodada? [s|n] ')
