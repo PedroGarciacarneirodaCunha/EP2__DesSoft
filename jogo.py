@@ -38,7 +38,7 @@ Você tem 20 tentativas.
 
     capital = paises[pais]["capital"]
 
-    dicas = {'1':['Cor da bandeira', 4], '2':['Letra da capital', 3], '3':['Área', 6], '4':['População', 5], '5':['Continente', 7], '0':['Sem dica', 0]}} ## Dicionário com as dicas disponíveis inicialmente
+    dicas = {'1':['Cor da bandeira', 4], '2':['Letra da capital', 3], '3':['Área', 6], '4':['População', 5], '5':['Continente', 7], '0':['Sem dica', 0]} ## Dicionário com as dicas disponíveis inicialmente
     
     total_d = 0 ## Total de dicas pedidas
 
