@@ -138,4 +138,28 @@ def func_disp(dic):
 
     return saida
 
-# 
+# Criando a lista de letras restirtas (usada no "Sorteando a letra")
+
+def restinge(nome):
+
+    saida = []
+    
+    aux = {}
+
+    for letra in nome:
+
+        if letra not in aux.keys():
+
+            aux[letra] = 1
+        else:
+
+            aux[letra] += 1
+
+    for letra, rep in aux.items():
+
+        if rep > 1:
+            saida.append(letra)
+
+    return saida
+
+# Colorindo as distancias
