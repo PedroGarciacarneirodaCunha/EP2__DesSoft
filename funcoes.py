@@ -165,3 +165,44 @@ def restinge(nome):
     return saida
 
 # Colorindo as distancias
+
+def colore_palavra(lista):
+
+    pais = lista[0]
+    
+    pais = lista[1]
+
+    if dist >= 10.000:
+
+        saida = (Fore.BLACK + f'{lista[1]:.3f} km -> {lista[0]}' + Style.RESET_ALL)
+    
+    elif dist >= 4.000:
+        
+        saida = (Fore.RED + f'{lista[1]:.3f} km -> {lista[0]}' + Style.RESET_ALL)
+
+    elif dist >= 1.000:
+
+        saida = (Fore.YELLOW + f'{lista[1]:.3f} km -> {lista[0]}' + Style.RESET_ALL)
+
+    else:
+
+        saida = (Fore.BLUE + f'{int(lista[1] * 1000)} km -> {lista[0]}' + Style.RESET_ALL)
+    
+    return saida
+
+# Colorindo o número de tentativas
+
+def colore_tentativas(num):
+
+    if num > 10:
+
+        return (Fore.BLUE + f'{num}' + Style.RESET_ALL)
+    
+    elif num > 5:
+
+        return (Fore.YELLOW + f'{num}' + Style.RESET_ALL)
+
+    else:
+
+        return (Fore.RED + f'{num}' + Style.RESET_ALL)
+
