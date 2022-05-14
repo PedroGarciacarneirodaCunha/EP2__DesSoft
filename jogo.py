@@ -120,7 +120,7 @@ Você tem 20 tentativas.
                             sorteado = sorteia_letra(capital, restritos)
 
                             restritos.append(sorteado)
-                            
+
                             dicas_dadas.append(f 'Letra de capital: {sorteado}]')
 
                             tentativas -= 3
@@ -206,3 +206,37 @@ Você tem 20 tentativas.
 
                 # Adiciona o palpite na lista de países citados
                 palpites = adiciona_em_ordem(palpite, distancia, palpites)
+
+                print ('Distâncias: ')
+
+                for chute in palpites:
+
+                    print(f'{colore_palavra(chute)}')
+
+                print ('Dicas: ')
+
+                for dica in dicas_dadas:
+
+                    print(dica)
+
+                tentativas -= 1
+
+                if tentativas > 0:
+
+                    print (f'Você ainda tem { colore_tentativas(tentativas)} teantativa(s)')
+
+    if tentativas == 0:
+
+        print (f'Você perdeu, o país era: {país}')
+
+    jogar = input ('Jogar novamente? [s|n] ')
+
+    while jogar != 's' and jogar != 'n':
+
+        jogar = input ('Digite |s| ou |n|: ')
+
+    if jogar == 'n':
+
+        print ('Até a próxima vez!')
+
+        break
