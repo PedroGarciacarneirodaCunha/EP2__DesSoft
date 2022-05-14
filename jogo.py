@@ -74,7 +74,7 @@ Você tem 20 tentativas.
 
                     dica_l = ldicas(dicas)
 
-                    print ('Mercaod de dicas')
+                    print ('Mercado de dicas')
                     print ('------------------------------------------')
 
                     for opt in dica_l:
@@ -117,13 +117,11 @@ Você tem 20 tentativas.
 
                             capital = paises[pais]['capital']
 
-                            restritos = restringe(capital)
-
                             sorteado = sorteia_letra(capital, restritos)
 
                             restritos.append(sorteado)
 
-                            dicas_dadas.append(f'Letra de capital: {sorteado}]')
+                            dicas_dadas.append(f'Letra de capital: {sorteado}')
 
                             tentativas -= 3
 
@@ -143,11 +141,11 @@ Você tem 20 tentativas.
 
                         elif o == '4':
 
-                            pop = paises[pais]['população']
+                            pop = paises[pais]['populacao']
 
-                            dicas_dadas.append (f'Área: {area} km2')
+                            dicas_dadas.append(f'População: {pop} habitantes')
 
-                            tentativas -= 6
+                            tentativas -= 5
 
                             del dicas [o]
 
@@ -184,7 +182,7 @@ Você tem 20 tentativas.
                         
 
 
-            if palpite == 'desisto':
+            elif palpite == 'desisto':
                 print('Calma, o senhor está nervoso')
                 ctz = input('Tem certeza que deseja desistir da rodada? [s|n] ')
                 while ctz != 's' and ctz != 'n':
@@ -194,7 +192,7 @@ Você tem 20 tentativas.
                     break
             
             elif palpite == pais:
-                print (f'Parabésn, você acertou em {20 - tentativas + 1} tentativa(s)!!!')
+                print (f'Parabéns, você acertou em {20 - tentativas + 1} tentativa(s)!!!')
                 break
 
             elif palpite not in paises.keys():
@@ -239,6 +237,6 @@ Você tem 20 tentativas.
 
     if jogar == 'n':
 
-        print ('Até a próxima vez!')
+        print ('Até a próxima!')
 
         break

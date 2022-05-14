@@ -136,7 +136,7 @@ def func_disp(dic):
 
     dicas_disp = f'{disp}'
 
-    saida = dicas_disp.replace(',', '|')
+    saida = dicas_disp.replace(', ', '|')
 
     return saida
 
@@ -170,7 +170,7 @@ def colore_palavra(lista):
 
     pais = lista[0]
     
-    pais = lista[1]
+    dist = lista[1]
 
     if dist >= 10.000:
 
