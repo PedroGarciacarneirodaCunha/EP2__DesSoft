@@ -1,5 +1,7 @@
 from random import choice
 from math import *
+from colorama import Fore, Back, Style
+from more_itertools import pairwise
 
 # Corrigir o dicionario
 def normaliza(dic):
