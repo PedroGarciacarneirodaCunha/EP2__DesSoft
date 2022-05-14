@@ -142,7 +142,7 @@ def func_disp(dic):
 
 # Criando a lista de letras restirtas (usada no "Sorteando a letra")
 
-def restinge(nome):
+def restringe(nome):
 
     saida = []
     
