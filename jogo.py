@@ -1,5 +1,7 @@
 from funcoes import *
 from dados import DADOS
+from random import choice
+from colorama import Fore, Style
 
 paises = normaliza(DADOS)
 
@@ -121,7 +123,7 @@ Você tem 20 tentativas.
 
                             restritos.append(sorteado)
 
-                            dicas_dadas.append(f 'Letra de capital: {sorteado}]')
+                            dicas_dadas.append(f'Letra de capital: {sorteado}]')
 
                             tentativas -= 3
 
@@ -227,7 +229,7 @@ Você tem 20 tentativas.
 
     if tentativas == 0:
 
-        print (f'Você perdeu, o país era: {país}')
+        print (f'Você perdeu, o país era: {pais}')
 
     jogar = input ('Jogar novamente? [s|n] ')
 
