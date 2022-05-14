@@ -1,5 +1,7 @@
 from funcoes import *
 from dados import DADOS
+from random import choice
+from colorama import Fore, Style
 
 paises = normaliza(DADOS)
 
@@ -36,7 +38,7 @@ Você tem 20 tentativas.
 
     capital = paises[pais]["capital"]
 
-    dicas = {'1':['Cor da bandeira', 4], '2':['Letra da capital', 3], '3':['Área', 6], '4':['População', 5], '5':['Continente', 7], '0':['Sem dica', 0]}} ## Dicionário com as dicas disponíveis inicialmente
+    dicas = {'1':['Cor da bandeira', 4], '2':['Letra da capital', 3], '3':['Área', 6], '4':['População', 5], '5':['Continente', 7], '0':['Sem dica', 0]} ## Dicionário com as dicas disponíveis inicialmente
     
     total_d = 0 ## Total de dicas pedidas
 
@@ -121,7 +123,7 @@ Você tem 20 tentativas.
 
                             restritos.append(sorteado)
 
-                            dicas_dadas.append(f 'Letra de capital: {sorteado}]')
+                            dicas_dadas.append(f'Letra de capital: {sorteado}]')
 
                             tentativas -= 3
 
@@ -227,7 +229,7 @@ Você tem 20 tentativas.
 
     if tentativas == 0:
 
-        print (f'Você perdeu, o país era: {país}')
+        print (f'Você perdeu, o país era: {pais}')
 
     jogar = input ('Jogar novamente? [s|n] ')
 
