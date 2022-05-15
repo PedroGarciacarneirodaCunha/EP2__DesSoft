@@ -99,11 +99,11 @@ Você tem {colore_tentativas(20)} tentativas.
                     else:
                         if o == '1':
 
-                            car_sort = choice(cores)
+                            cor_sort = choice(cores)
                             
-                            dicas_dadas.append(f'Cores da bandeira: {car_sort}')
+                            dicas_dadas.append(f'Cores da bandeira: {cor_sort}')
 
-                            cores.remove (car_sort)
+                            cores.remove (cor_sort)
 
                             if len (cores) == 0:
 
