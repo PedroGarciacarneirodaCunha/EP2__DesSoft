@@ -26,9 +26,9 @@ jogo = True
 
 while jogo:
     print(
-'''
+f'''
 Um pais foi escolhido, tente adivinhar!
-Você tem 20 tentativas.
+Você tem {colore_tentativas(20)} tentativas.
 ''')
 
     tentativas = 20 # tentativas disponíveis
