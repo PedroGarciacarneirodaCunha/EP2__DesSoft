@@ -115,8 +115,6 @@ Você tem {colore_tentativas(20)} tentativas.
 
                         elif o == '2':
 
-                            capital = paises[pais]['capital']
-
                             sorteado = sorteia_letra(capital, restritos)
 
                             restritos.append(sorteado)
