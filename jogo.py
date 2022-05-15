@@ -92,7 +92,7 @@ Você tem {colore_tentativas(20)} tentativas.
                         print ('Opção inválida')
                         o = input(f'Escolha uma dica {disp}: ')
                     
-                    if dicas[o][1] > tentativas:
+                    if dicas[o][1] >= tentativas:
 
                         print ('Você não tem tentativas suficiente')
 
